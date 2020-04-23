@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 function useWordGame() {
-  const STARTING_TIME = 5
+  const STARTING_TIME = 5;
 
   const [text, setText] = useState("");
   const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME);
@@ -22,7 +22,7 @@ function useWordGame() {
     setHasGameStarted(true);
     setTimeRemaining(STARTING_TIME);
     setText("");
-    textareaRef.current.disabled = false
+    textareaRef.current.disabled = false;
     textareaRef.current.focus();
   }
 
@@ -41,6 +41,6 @@ function useWordGame() {
     }
   },[timeRemaining, hasGameStarted]);
 
-  return {textareaRef, text, handleTextChange, hasGameStarted, timeRemaining, startGame, wordCount}
+  return {textareaRef, text, handleTextChange, hasGameStarted, timeRemaining, startGame, wordCount};
 }
   export default useWordGame
